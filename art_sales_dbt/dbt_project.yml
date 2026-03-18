@@ -1,0 +1,26 @@
+
+name: 'art_sales_dbt'
+version: '1.0.0'
+profile: 'art_sales_dbt'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["test"]
+seed-paths: ["seeds"]
+macro-paths: ["snapshots"]
+
+clean-targets:
+ - "target"
+ - "dbt_packages"
+
+models:
+ art_sales_dbt:
+
+  staging:
+    +schema: analytics_art_sales_staging
+    +materialized: view
+
+  marts:
+    +schema: analytics_art_sales_mart
+    +materialized: table
+
