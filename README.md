@@ -1,6 +1,13 @@
 # art-sales-bigquery-dbt project
 Production-ready art sales cloud end-to-end analytics engineering project demonstrating a modern ELT pipeline using Github, VS Code + WSL Ubuntu + Python 3.11 + Conda + GCP + BigQuery + dbt + Looker Studio
 
+# Focus Learning:
+Python Ingestion
+Cloud data warehouse
+Data modeling
+Analytics engineering
+Dashboarding
+
 ## 📊 Executive Art Market Intelligence Dashboard
 
 This dashboard visualizes insights from the art sales data pipeline built using:
@@ -107,7 +114,55 @@ top_artists
 sales_by_style
 price_trend_by_year
 
+---
 
+### 5 Dashboard
 
+Interactive dashboard built in Looker Studio.
 
+Features:
 
+- Total sales KPIs
+- Top artists
+- Sales by art movement
+- Price trends over time
+
+---
+
+## Dataset
+
+Dataset source:
+
+Kaggle Art Sales Dataset
+
+Download and place in:
+data/artDataset.csv
+
+Dataset is not stored in Github repository due to file size limits (100MB).
+
+---
+
+## Project Structure
+
+art-sales-bigquery-dbt
+|
+|--art_sales_dbt  # dbt models
+|--docs           # dashboard screenshot
+|--notebooks      # analysis
+|--load_raw.py    # ingestion script
+|--README.md
+|--.gitignore
+
+---
+
+## Dashboard Preview
+
+![Dashboard](docs/dashbd_preview.png)
+
+---
+
+## Future Improvements
+
+- Add pipeline automation
+- Add scheduled orchestration
+- Add machine learning forecasting
