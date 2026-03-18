@@ -140,29 +140,29 @@ Dimension tables:
 - dim_style
 - dim_date
 
-### 4 - Analytics Models
+### 4 - Data Quality Testing
+
+Data quality is validated using dbt tests and SQL checks.
+Implemented checks include: 
+```
+- Null values validation
+- Duplicates detection
+- Referential integrity checks
+- Business rule validation (positive price)
+```
+```
+test/test_positive_price.sql  
+models/mart/schema.yml        
+test/test_valid_year.sql
+```
+
+### 5 - Analytics Models
 
 Analytics tables used for the dashboard:
 
 - top_artists
 - sales_by_style
 - price_trend_by_year
-  
-### 5 - Data Quality Testing
-
-Data quality is validated using dbt tests and SQL checks.
-Implemented checks include: 
-
-1️⃣ Null values validation
-2️⃣ Duplicates detection
-3️⃣ Referential integrity checks
-4️⃣ Business rule validation (positive price)
-
-```
-test/test_positive_price.sql  
-models/mart/schema.yml        
-test/test_valid_year.sql
-```
 
 ### 6 - Validation
 
@@ -177,7 +177,7 @@ The Jupyter notebook shows:
 
 ---
 
-### 5 - Dashboard
+### 7 - Dashboard
 
 Interactive dashboard built in Looker Studio.
 
