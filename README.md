@@ -22,6 +22,8 @@ BigQuery raw tables
      ↓
 dbt transformations
      ↓
+data quality testings
+     ↓
 Star schema warehouse
      ↓
 Python analysis notebook
