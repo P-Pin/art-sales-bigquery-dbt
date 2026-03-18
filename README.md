@@ -1,12 +1,32 @@
 # art-sales-bigquery-dbt project
 Production-ready art sales cloud end-to-end analytics engineering project demonstrating a modern ELT pipeline using Github, VS Code + WSL Ubuntu + Python 3.11 + Conda + GCP + BigQuery + dbt + Looker Studio
 
-# Focus Learning:
+This project builds an end-to-end analytics pipeline for art auction data using BigQuery and dbt. Raw CSV data is ingested into a cloud data warehouse, transformed into a dimensional star schema using dbt, and visualized through an interactive dashboard.
+
+## Focus Learning:
 Python Ingestion
 Cloud data warehouse
 Data modeling
 Analytics engineering
 Dashboarding
+
+## ELT Analytics Stack:
+```
+CSV dataset
+     ↓
+Python ingestion
+     ↓
+BigQuery raw tables
+     ↓
+dbt transformations
+     ↓
+Star schema warehouse
+     ↓
+Python analysis notebook
+     ↓
+Looker dashboard
+```
+---
 
 ## 📊 Executive Art Market Intelligence Dashboard
 
@@ -14,8 +34,7 @@ This dashboard visualizes insights from the art sales data pipeline built using:
 
 - Python (data ingestion)
 - BigQuery (data warehouse)
-- dbt (data transformations)
-- Meltano (pipeline orchestration)
+- dbt (data transformations & orchestration)
 - Looker Studio (business intelligence)
 
 🔗 **Live Dashboard**
@@ -96,7 +115,12 @@ dim_date
 fact_art_sales
 
 ### 3 Star Schema
-
+```
+fact_art_sales
+ ├ artist_id → dim_artist
+ ├ style_id → dim_style
+ └ year_id → dim_date
+```
 Fact table:
 
 fact_art_sales
@@ -164,7 +188,7 @@ art-sales-bigquery-dbt
 
 ### Data Pipeline Architecture
 
-![Data Pipeline Architecture](docs/pipeline_arch.png)
+![Data Pipeline Architecture Flow Diagram](docs/pipeline_arch.png)
 
 ---
 
