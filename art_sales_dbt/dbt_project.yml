@@ -17,10 +17,10 @@ models:
  art_sales_dbt:
 
   staging:
-    +schema: analytics_art_sales_staging
+    +schema: art_sales_staging
     +materialized: view
 
   marts:
-    +schema: analytics_art_sales_mart
+    +schema: art_sales_mart
     +materialized: table
 
