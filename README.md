@@ -89,17 +89,17 @@ Looker Studio Dashboard
 
 ## Data Pipeline Steps
 
-### 1 Data Ingestion
+### 1 - Data Ingestion
 
 Raw CSV data is loaded into BigQuery using:
 ```
 python load_raw.py
 ```
 This loads data into:
-
+```
 art_sales_raw.raw_art_sales
-
-### 2 Data Transformation (dbt) / Orchestration - manual
+```
+### 2 - Data Transformation (dbt) / Orchestration - manual
 Orchestration is manual due to small scale project: 1 dataset, 1 warehouse and 1 dbt project
 
 Run dbt models:
@@ -116,7 +116,7 @@ dim_style
 dim_date
 fact_art_sales
 ```
-### 3 Star Schema
+### 3 - Star Schema
 ```
 fact_art_sales
  ├ artist_id → dim_artist
@@ -133,7 +133,7 @@ Dimension tables:
 - dim_style
 - dim_date
 ```
-### 4 Analytics Models
+### 4 - Analytics Models
 
 Analytics tables used for the dashboard:
 ```
@@ -143,7 +143,7 @@ Analytics tables used for the dashboard:
 ```
 ---
 
-### 5 Dashboard
+### 5 - Dashboard
 
 Interactive dashboard built in Looker Studio.
 
