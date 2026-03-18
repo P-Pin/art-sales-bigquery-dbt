@@ -68,7 +68,7 @@ Looker Studio Dashboard
 
 ## Data Pipeline Steps
 
-### 1️⃣ Data Ingestion
+### 1 Data Ingestion
 
 Raw CSV data is loaded into BigQuery using:
 
@@ -78,7 +78,7 @@ This loads data into:
 
 art_sales_raw.raw_art_sales
 
-### 2️⃣ Data Transformation (dbt)
+### 2 Data Transformation (dbt)
 
 Run dbt models:
 
@@ -94,7 +94,7 @@ dim_style
 dim_date
 fact_art_sales
 
-3️⃣ Star Schema
+### 3 Star Schema
 
 Fact table:
 
@@ -106,7 +106,7 @@ dim_artist
 dim_style
 dim_date
 
-4️⃣ Analytics Models
+### 4 Analytics Models
 
 Analytics tables used for the dashboard:
 
