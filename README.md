@@ -94,7 +94,7 @@ Looker Studio Dashboard
 ```
 ---
 
-## Data Pipeline Steps
+## Data Pipeline Workflow
 
 ### 1 - Data Ingestion
 
