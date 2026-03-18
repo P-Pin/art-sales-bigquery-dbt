@@ -78,7 +78,8 @@ This loads data into:
 
 art_sales_raw.raw_art_sales
 
-### 2 Data Transformation (dbt)
+### 2 Data Transformation (dbt) / Orchestration - manual
+Orchestration is manual due to small scale project: 1 dataset, 1 warehouse and 1 dbt project
 
 Run dbt models:
 
@@ -160,3 +161,65 @@ art-sales-bigquery-dbt
 - Add pipeline automation
 - Add scheduled orchestration
 - Add machine learning forecasting
+
+### Pipeline Automation
+- Optional Schedule Pipeline with Github Automation
+- Create:
+  ```
+  .github/workflows/pipeline.yml
+  ```
+  Example:
+  ```
+  name: Run Data Pipeline
+
+  on:
+  workflow_dispatch:
+
+  jobs:
+    pipeline:
+      runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install dbt-bigquery pandas google-cloud-bigquery
+
+    - name: Run pipeline
+      run: |
+        python load_raw.py
+        cd art_sales_dbt
+        dbt run
+        dbt test
+  ```
+  ### SChedule Orchestration
+  - Create a single pipeline script option to run automatically:
+    ```
+    run_pipeline.sh
+    ```
+    Example:
+    ```
+    #!/bin/bash
+
+    echo "Running data ingestion..."
+    python load_raw.py
+
+    echo "Running dbt transformation..."
+    cd art_Sales_dbt
+    dbt run
+    dbt test
+
+    echo "Pipeline completed."
+    ```
+    Run:
+    ```
+    bash run_pipeline.sh
+    ```
+    
+        
