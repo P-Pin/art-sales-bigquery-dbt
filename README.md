@@ -71,9 +71,9 @@ Looker Studio Dashboard
 ### 1 Data Ingestion
 
 Raw CSV data is loaded into BigQuery using:
-
+```
 python load_raw.py
-
+```
 This loads data into:
 
 art_sales_raw.raw_art_sales
@@ -82,11 +82,11 @@ art_sales_raw.raw_art_sales
 Orchestration is manual due to small scale project: 1 dataset, 1 warehouse and 1 dbt project
 
 Run dbt models:
-
+```
 cd art_sales_dbt
 dbt run
 dbt test
-
+```
 Models created:
 
 stg_art_sales
@@ -198,7 +198,7 @@ art-sales-bigquery-dbt
         dbt run
         dbt test
   ```
-  ### SChedule Orchestration
+  ### Schedule Orchestration
   - Create a single pipeline script option to run automatically:
     ```
     run_pipeline.sh
