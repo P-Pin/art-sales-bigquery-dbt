@@ -3,6 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Ignore Windows Zone.Identifier metadata files
+*Zone.Identifier
+
 # GCP Credentials
 *.json
 *prod*.json
