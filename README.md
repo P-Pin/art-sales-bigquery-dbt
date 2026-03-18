@@ -8,6 +8,7 @@ This project builds an end-to-end analytics pipeline for art auction data using 
 Python Ingestion
 Cloud data warehouse
 Data modeling
+Data Quality Testing
 Analytics engineering
 Dashboarding
 ```
@@ -69,11 +70,11 @@ BigQuery Raw Layer
 ↓
 dbt Staging Models
 ↓
-Data Quality Gate 1: (Unique, Null Value)
+Data Quality Gate 1: dbt test (Unique, Null Value)
 ↓
 dbt Mart Models (Star Schema)
 ↓
-Data Quality Gate 2: (Referential Integrity, Business Logic)
+Data Quality Gate 2: dbt test (Referential Integrity, Business Logic)
 ↓
 Analytics Tables
 ↓
