@@ -144,15 +144,25 @@ Dataset is not stored in Github repository due to file size limits (100MB).
 ---
 
 ## Project Structure
-
+```
 art-sales-bigquery-dbt
 |
 |--art_sales_dbt  # dbt models
 |--docs           # dashboard screenshot
 |--notebooks      # analysis
-|--load_raw.py    # ingestion script
+|--load_raw.py    # ingestion script (*removed after initial ingestion for security reason)
 |--README.md
 |--.gitignore
+```
+### Folder Structure 
+
+![Folder File Structure](docs/file_structure.png)
+
+### Data Lineage and Database Structure
+
+![Data Lineage and Database Structure](docs/dbt_lineage.png)
+
+### Data Pipeline Architecture
 
 ![Data Pipeline Architecture](docs/pipeline_arch.png)
 
