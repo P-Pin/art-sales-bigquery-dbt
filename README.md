@@ -4,12 +4,13 @@ Production-ready art sales cloud end-to-end analytics engineering project demons
 This project builds an end-to-end analytics pipeline for art auction data using BigQuery and dbt. Raw CSV data is ingested into a cloud data warehouse, transformed into a dimensional star schema using dbt, and visualized through an interactive dashboard.
 
 ## Focus Learning:
+```
 Python Ingestion
 Cloud data warehouse
 Data modeling
 Analytics engineering
 Dashboarding
-
+```
 ## ELT Analytics Stack:
 ```
 CSV dataset
@@ -58,7 +59,7 @@ The pipeline ingests raw CSV data, loads it into a cloud data warehouse, transfo
 ---
 
 ## Architecture
-
+```
 CSV Dataset
 ↓
 Python Data Ingestion
@@ -72,17 +73,17 @@ dbt Mart Models (Star Schema)
 Analytics Tables
 ↓
 Looker Studio Dashboard
-
+```
 ---
 
 ## Tech Stack
-
+```
 - Python
 - Google BigQuery
 - dbt
 - Looker Studio
 - GitHub
-
+```
 ---
 
 ## Data Pipeline Steps
