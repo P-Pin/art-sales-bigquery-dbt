@@ -10,6 +10,7 @@ __pycache__/
 *.json
 *prod*.json
 *staging*.json
+.env
 
 # Datasets 
 data/
