@@ -17,4 +17,4 @@ This dashboard visualizes insights from the art sales data pipeline built using:
 
 ## 📊 Dashboard Preview
 
-![Art Sales Dashboard](docs/dashboard_preview.png)
+![Art Sales Dashboard](docs/dashbd_preview.png)
