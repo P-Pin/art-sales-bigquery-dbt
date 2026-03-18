@@ -199,9 +199,17 @@ art-sales-bigquery-dbt
 
 ![Data Lineage and Database Structure](docs/dbt_lineage.png)
 
-### Data Pipeline Architecture
+### Data Pipeline Workflow & Architecture
+```
+1. Raw art dataset CSV is ingested using Python.
+2. Data is loaded into BigQuery raw tables.
+3. dbt transforms raw tables into staging models.
+4. dbt builds dimensional mart tables.
+5. Data is analyzed using Python notebooks.
+6. Business insights are visualized using Looker Studio.
+```
 
-![Data Pipeline Architecture Flow Diagram](docs/pipeline_arch.png)
+![Data Pipeline Architecture Diagram](docs/pipeline_arch.png)
 
 ---
 
