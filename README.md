@@ -141,6 +141,16 @@ Analytics tables used for the dashboard:
 - sales_by_style
 - price_trend_by_year
 ```
+### 5 - Validation
+```
+notebooks/art_sales_analysis.ipynb
+```
+The Jupyter notebook shows:
+```
+- validation queries
+- trend analysis
+- Python analytics
+```
 ---
 
 ### 5 - Dashboard
