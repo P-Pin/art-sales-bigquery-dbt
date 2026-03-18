@@ -124,23 +124,23 @@ fact_art_sales
  └ year_id → dim_date
 ```
 Fact table:
-
-fact_art_sales
-
+```
+- fact_art_sales
+```
 Dimension tables:
-
-dim_artist
-dim_style
-dim_date
-
+```
+- dim_artist
+- dim_style
+- dim_date
+```
 ### 4 Analytics Models
 
 Analytics tables used for the dashboard:
-
-top_artists
-sales_by_style
-price_trend_by_year
-
+```
+- top_artists
+- sales_by_style
+- price_trend_by_year
+```
 ---
 
 ### 5 Dashboard
@@ -148,23 +148,24 @@ price_trend_by_year
 Interactive dashboard built in Looker Studio.
 
 Features:
-
+```
 - Total sales KPIs
 - Top artists
 - Sales by art movement
 - Price trends over time
-
+```
 ---
 
 ## Dataset
 
 Dataset source:
-
+```
 Kaggle Art Sales Dataset
-
+```
 Download and place in:
+```
 data/artDataset.csv
-
+```
 Dataset is not stored in Github repository due to file size limits (100MB).
 
 ---
