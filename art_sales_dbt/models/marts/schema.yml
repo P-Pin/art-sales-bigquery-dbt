@@ -1,0 +1,55 @@
+version: 2
+
+# Duplicate Tests
+
+models:
+  - name: dim_artist
+    columns:
+      - name: artist_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_style
+    columns:
+      - name: style_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_date
+    columns:
+      - name: year_id
+        tests:
+          - not_null
+          - unique
+
+  - name: fact_art_sales
+    columns:
+      - name: sale_id
+        tests:
+          - not_null
+          - unique
+
+# Referential integrity tests
+
+  - name: fact_art_sales
+    columns:
+
+      - name: artist_id
+        tests:
+          - relationships:
+              to: ref('dim_artist')
+              field: artist_id
+
+      - name: style_id
+        tests:
+          - relationships:
+              to: ref('dim_style')
+              field: style_id
+
+      - name: year_id
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: year_id
