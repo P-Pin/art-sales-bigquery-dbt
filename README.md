@@ -40,7 +40,8 @@ This dashboard visualizes insights from the art sales data pipeline built using:
 
 🔗 **Live Dashboard**
 
-[View the Interactive Dashboard] LIVE:[https://lookerstudio.google.com/reporting/abcd1234/page/p_xyz](https://lookerstudio.google.com/reporting/ed13ddd8-bc45-4ed7-9e4e-0e0e9f6262f3)
+View the Interactive Dashboard  
+LIVE:[https://lookerstudio.google.com/reporting/abcd1234/page/p_xyz](https://lookerstudio.google.com/reporting/ed13ddd8-bc45-4ed7-9e4e-0e0e9f6262f3)
 
 ---
 
