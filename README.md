@@ -154,6 +154,8 @@ art-sales-bigquery-dbt
 |--README.md
 |--.gitignore
 
+![Data Pipeline Architecture](docs/pipeline_arch.png)
+
 ---
 
 ## Future Improvements
