@@ -3,6 +3,27 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# GCP Credentials
+*.json
+*prod*.json
+*staging*.json
+
+# Datasets 
+data/
+*.zip
+*.csv
+*.json
+.env
+
+# Meltano runtime
+art_sales_pipeline/.meltano/
+art_sales_pipeline/meltano.db
+art_sales_pipeline/run/
+
+# dbt artifacts
+target/
+logs/
+
 # C extensions
 *.so
 
