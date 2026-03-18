@@ -155,12 +155,6 @@ art-sales-bigquery-dbt
 
 ---
 
-## Dashboard Preview
-
-![Dashboard](docs/dashbd_preview.png)
-
----
-
 ## Future Improvements
 
 - Add pipeline automation
