@@ -124,33 +124,33 @@ fact_art_sales
  └ year_id → dim_date
 ```
 Fact table:
-```
+
 - fact_art_sales
-```
+  
 Dimension tables:
-```
+
 - dim_artist
 - dim_style
 - dim_date
-```
+
 ### 4 - Analytics Models
 
 Analytics tables used for the dashboard:
-```
+
 - top_artists
 - sales_by_style
 - price_trend_by_year
-```
+
 ### 5 - Validation
 ```
 notebooks/art_sales_analysis.ipynb
 ```
 The Jupyter notebook shows:
-```
+
 - validation queries
 - trend analysis
 - Python analytics
-```
+
 ---
 
 ### 5 - Dashboard
@@ -158,12 +158,12 @@ The Jupyter notebook shows:
 Interactive dashboard built in Looker Studio.
 
 Features:
-```
+
 - Total sales KPIs
 - Top artists
 - Sales by art movement
 - Price trends over time
-```
+
 ---
 
 ## Dataset
@@ -200,14 +200,14 @@ art-sales-bigquery-dbt
 ![Data Lineage and Database Structure](docs/dbt_lineage.png)
 
 ### Data Pipeline Workflow & Architecture
-```
+
 1. Raw art dataset CSV is ingested using Python.
 2. Data is loaded into BigQuery raw tables.
 3. dbt transforms raw tables into staging models.
 4. dbt builds dimensional mart tables.
 5. Data is analyzed using Python notebooks.
 6. Business insights are visualized using Looker Studio.
-```
+
 
 ![Data Pipeline Architecture Diagram](docs/pipeline_arch.png)
 
