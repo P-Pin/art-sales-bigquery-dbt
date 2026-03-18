@@ -55,7 +55,7 @@ LIVE:[https://lookerstudio.google.com/reporting/abcd1234/page/p_xyz](https://loo
 
 This project builds an end-to-end data pipeline to analyze art market sales data.
 
-The pipeline ingests raw CSV data, loads it into a cloud data warehouse, transforms it into a dimensional model using dbt, and visualizes insights through a BI dashboard.
+The pipeline ingests raw CSV data, loads it into a cloud data warehouse, transforms it into a dimensional model using dbt, complete data quality testing and visualizes insights through a BI dashboard.
 
 ---
 
@@ -69,7 +69,11 @@ BigQuery Raw Layer
 ↓
 dbt Staging Models
 ↓
+Data Quality Gate 1: (Unique, Null Value)
+↓
 dbt Mart Models (Star Schema)
+↓
+Data Quality Gate 2: (Referential Integrity, Business Logic)
 ↓
 Analytics Tables
 ↓
@@ -140,8 +144,25 @@ Analytics tables used for the dashboard:
 - top_artists
 - sales_by_style
 - price_trend_by_year
+  
+### 5 - Data Quality Testing
 
-### 5 - Validation
+Data quality is validated using dbt tests and SQL checks.
+Implemented checks include: 
+
+1️⃣ Null values validation
+2️⃣ Duplicates detection
+3️⃣ Referential integrity checks
+4️⃣ Business rule validation (positive price)
+
+```
+test/test_positive_price.sql  
+models/mart/schema.yml        
+test/test_valid_year.sql
+```
+
+### 6 - Validation
+
 ```
 notebooks/art_sales_analysis.ipynb
 ```
@@ -184,7 +205,7 @@ Dataset is not stored in Github repository due to file size limits (100MB).
 ```
 art-sales-bigquery-dbt
 |
-|--art_sales_dbt  # dbt models
+|--art_sales_dbt  # dbt models and tests
 |--docs           # dashboard screenshot
 |--notebooks      # analysis
 |--load_raw.py    # ingestion script (*removed after initial ingestion for security reason)
@@ -204,10 +225,10 @@ art-sales-bigquery-dbt
 1. Raw art dataset CSV is ingested using Python.
 2. Data is loaded into BigQuery raw tables.
 3. dbt transforms raw tables into staging models.
-4. dbt builds dimensional mart tables.
-5. Data is analyzed using Python notebooks.
-6. Business insights are visualized using Looker Studio.
-
+4. dbt and SQL checks for data quality.
+5. dbt builds dimensional mart tables.
+6. Data is analyzed using Python notebooks.
+7. Business insights are visualized using Looker Studio.
 
 ![Data Pipeline Architecture Diagram](docs/pipeline_arch.png)
 
