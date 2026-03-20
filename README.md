@@ -31,8 +31,8 @@ Python analysis notebook
 Looker dashboard
 ```
 ## 📊 Executive Presentation and Report
-- 🔗 [View Full Deck (Google Drive)](https://drive.google.com/file/d/1h9J-eHpSvMuxzT85U52fC0xBZtuZwr0P/view?usp=sharing)
-- 📄 [View PDF Version](docs/executive_presentation.pdf)
+- 🔗 [View Full Deck (Google Drive)](https://drive.google.com/file/d/1OUvYe6Ydsfs3cudyGEk72KR4hKALTCha/view?usp=sharing)
+- 📄 [View PDF Version](https://drive.google.com/file/d/1h9J-eHpSvMuxzT85U52fC0xBZtuZwr0P/view?usp=sharing)
 ---
 
 ## 📊 Executive Art Market Intelligence Dashboard
